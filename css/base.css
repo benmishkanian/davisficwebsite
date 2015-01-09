@@ -1,0 +1,26 @@
+#mobileNav {
+    display: none;
+}
+
+#desktopNav {
+    display: block;
+}
+
+p, h1 {
+    font-family: Arial;
+}
+
+@media screen and (max-width: 640px) {
+    #mobileNav {
+        display: block;
+    }
+
+    #desktopNav {
+        display: none;
+    }
+
+    .eventInfo {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+}

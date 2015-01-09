@@ -1,0 +1,12 @@
+/* TEAM */
+  Web Developer: Ben Mishkanian
+  Contact: benmishkanian [at] ucdavis [dot] edu
+  LinkedIn: https://www.linkedin.com/in/bmishkan
+  Twitter: @benmishkanian
+  From: San Jose, California, USA
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Libraries and Frameworks: Foundation 5, JQuery, php login, jssor slider
+  Dependencies: PHP, MySQL
+  IDE: PhpStorm
