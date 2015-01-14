@@ -5,7 +5,7 @@
       <paths name="1and1">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/FIC" local="$PROJECT_DIR$" web="/FIC" />
           </mappings>
         </serverdata>
       </paths>

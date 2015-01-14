@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/base.css" />
@@ -10,7 +11,7 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/calendar.jpg">
+        <img src="img/careerpanel4.jpg" width="1920px">
         <div class="row">
             <div id="careerPanels" style="position:relative; top:-50px;"></div>
         <h2 style="font-family: cursive">Career Panels</h2>
@@ -23,10 +24,6 @@
 
             <!-- Slides Container -->
             <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 700px; height: 371px; overflow: hidden;">
-                <div>
-                    <img u="image" src="img/careerpanel4.jpg" />
-                    <img u="thumb" src="img/careerpanel4.jpg"/>
-                </div>
                 <div>
                     <img u="image" src="img/careerpanel2.jpg" />
                     <img u="thumb" src="img/careerpanel2.jpg"/>
@@ -134,13 +131,10 @@
             <a style="display: none" href="http://www.jssor.com">javascript</a>
         </div>
         <!-- Jssor Slider End -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed imperdiet risus.
-                Aenean vestibulum, dui sed ultrices faucibus, massa ligula dapibus sapien, at sollicitudin
-                neque lorem quis sapien. Nunc vehicula est mi, id rutrum leo interdum eget. Nulla porta arcu efficitur,
-                cursus est sed, volutpat mauris. Vivamus rhoncus eget nibh iaculis fringilla. Nunc hendrerit nisi sed
-                finibus maximus. Aenean faucibus diam at blandit pharetra. Praesent aliquet egestas dui, ut hendrerit
-                risus lobortis at. Nullam eu posuere ante, ut porttitor urna. Pellentesque id tellus id justo accumsan
-                cursus. Nulla facilisi. Fusce finibus dignissim malesuada.</p>
+            <p>Our annual career panel is an open event where accomplished financial professionals speak
+            about their experiences and careers. It is a great opportunity to gain exposure and insight into
+                multiple areas of finance. The event consists of a one-hour Q&amp;A session led by the club,
+            followed by open questions and the opportunity to meet the professionals one-on-one.</p>
 
         </div>
         <div class="row">
@@ -149,23 +143,23 @@
             <hr>
             <!-- Jssor Slider Begin -->
             <!-- You can move inline styles to css file or css block. -->
-            <div id="slider2_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 800px;
+            <div id="slider2_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 700px;
         height: 456px; background: #191919; overflow: hidden;">
 
 
                 <!-- Slides Container -->
-                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;">
+                <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 700px; height: 371px; overflow: hidden;">
                     <div>
-                        <img u="image" src="img/landscape.jpg" />
-                        <img u="thumb" src="img/01.jpg" />
+                        <img u="image" src="img/investing101.jpg" />
+                        <img u="thumb" src="img/investing101.jpg"/>
                     </div>
                     <div>
-                        <img u="image" src="img/MP900439293.JPG" />
-                        <img u="thumb" src="img/02.JPG" />
+                        <img u="image" src="img/investinginchina.jpg" />
+                        <img u="thumb" src="img/investinginchina.jpg"/>
                     </div>
                     <div>
-                        <img u="image" src="img/2012group.jpg" />
-                        <img u="thumb" src="img/03.jpg" />
+                        <img u="image" src="img/oldteam.jpg" />
+                        <img u="thumb" src="img/oldteam.jpg"/>
                     </div>
                 </div>
 
@@ -204,7 +198,7 @@
                 <!-- Arrow Navigator Skin End -->
 
                 <!-- Thumbnail Navigator Skin Begin -->
-                <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 800px; height: 100px; left:0px; bottom: 0px;">
+                <div u="thumbnavigator" class="jssort01" style="position: absolute; width: 700px; height: 90px; left:0px; bottom: 0px;">
                     <!-- Thumbnail Item Skin Begin -->
                     <style>
                         /* jssor slider thumbnail navigator skin 01 css */
@@ -227,32 +221,32 @@
                             position: absolute;
                             top: 0px;
                             left: 0px;
-                            width: 68px;
-                            height: 68px;
+                            width: 135px;
+                            height: 72px;
                             border: #000 2px solid;
                         }
 
                         .jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
-                            background: url(/img/t01.png) center center;
+                            background: url(/img/t01.png);
                             border-width: 0px;
                             top: 2px;
                             left: 2px;
-                            width: 68px;
-                            height: 68px;
+                            width: 135px;
+                            height: 72px;
                         }
 
                         .jssort01 .p:hover .c, .jssort01 .pav:hover .c {
                             top: 0px;
                             left: 0px;
-                            width: 70px;
-                            height: 70px;
+                            width: 135px;
+                            height: 72px;
                             border: #fff 1px solid;
                         }
                     </style>
                     <div u="slides" style="cursor: move;">
-                        <div u="prototype" class="p" style="position: absolute; width: 72px; height: 72px; top: 0; left: 0;">
+                        <div u="prototype" class="p" style="position: absolute; width: 135px; height: 72px; top: 0; left: 0;">
                             <div class=w><thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate></div>
-                            <div class=c>
+                            <div class=c style="width: 135px; height: 72px">
                             </div>
                         </div>
                     </div>
@@ -262,13 +256,9 @@
                 <a style="display: none" href="http://www.jssor.com">javascript</a>
             </div>
             <!-- Jssor Slider End -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed imperdiet risus.
-                Aenean vestibulum, dui sed ultrices faucibus, massa ligula dapibus sapien, at sollicitudin
-                neque lorem quis sapien. Nunc vehicula est mi, id rutrum leo interdum eget. Nulla porta arcu efficitur,
-                cursus est sed, volutpat mauris. Vivamus rhoncus eget nibh iaculis fringilla. Nunc hendrerit nisi sed
-                finibus maximus. Aenean faucibus diam at blandit pharetra. Praesent aliquet egestas dui, ut hendrerit
-                risus lobortis at. Nullam eu posuere ante, ut porttitor urna. Pellentesque id tellus id justo accumsan
-                cursus. Nulla facilisi. Fusce finibus dignissim malesuada.</p>
+            <p>In a typical quarter, the club will hold one to two open meetings. The meeting features a well-established
+            business professional that presents on some financial topic. Afterwords, you will have an opportunity to
+            talk with the speaker, as well as the members, and learn more about us and the club.</p>
 
         </div>
 

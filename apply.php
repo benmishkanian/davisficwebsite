@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apply</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/base.css" />
@@ -24,28 +25,31 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/applynow.jpg" width="1920px" />
-        <p id="thankYou" style="display: none">Thank you for your application. We will review it as soon as possible.</p>
-        <form id="mainForm" data-abide action="upload.php" method="post" enctype="multipart/form-data">
+        <img src="img/meeting.JPG" width="1920px" />
+        <div class="row">
+        <p style="text-align: center">The application for Spring 2015 membership is now open. Applications will be reviewed in February.</p>
+        <p id="thankYou" style="display: none">Thank you for your application. We will review it as soon as possible, and send you an email containing next steps.</p>
+        </div>
+            <form id="mainForm" data-abide action="upload.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="large-5 columns">
                     <label>First Name</label>
-                    <input required name="firstName" type="text" placeholder="large-5.columns" />
+                    <input required name="firstName" type="text" placeholder="First Name" />
                 </div>
                 <div class="large-5 columns">
                     <label>Last Name</label>
-                    <input required name="lastName" type="text" placeholder="large-5.columns" />
+                    <input required name="lastName" type="text" placeholder="Last Name" />
                 </div>
             </div>
             <div class="row">
                 <div class="large-5 columns">
                     <label>Email Address</label>
-                    <input required id="email1" name="email" type="email" placeholder="large-5.columns" />
+                    <input required id="email1" name="email" type="email" placeholder="john.smith@example.com" />
                 </div>
                 <div class="large-5 columns">
-                    <label>Retype Email Address</label>
-                    <input id="email2" type="email" placeholder="large-5.columns" onblur="validateEmail()"/>
-                    <small id="emailError" class="error" style="display: none">Address does not match</small>
+                    <label>Confirm Email Address</label>
+                    <input id="email2" type="email" placeholder="john.smith@example.com" onblur="validateEmail()"/>
+                    <small id="emailError" class="error" style="display: none">Email addresses do not match</small>
                 </div>
             </div>
             <div class="row">

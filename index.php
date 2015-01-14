@@ -9,7 +9,7 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
     <meta name="author" content="Ben Mishkanian">
     <meta name="description" content="The Finance and Investment Club at UC Davis">
     <meta name="keywords" content="finance, investment, Davis, business, economics, banking, accounting, stocks, analysis, networking, career, FIC">
-	<title>UC Davis Finance &amp; Investment Club</title>
+    <title>UC Davis Finance &amp; Investment Club</title>
 	<link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/base.css" />
 	<script src="js/vendor/modernizr.js"></script>
@@ -83,39 +83,38 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 		<section class="main-section" style="padding: 0">
 			<div class="row">
 				<div class="large-12 columns">
-					<p style="text-align: center; margin-bottom: 0; padding-bottom: 0; font-family: Lucida Grande; color: #002855">UC Davis</p>
-					<h1 style="text-align: center">Finance &amp; Investment Club</h1>
-
-				</div>
+                    <img src="img/Title.svg" />
+                    <p style="text-align: center; margin-bottom: 0; padding-bottom: 0; font-family: Lucida Grande; color: #002855">at UC Davis</p>
+                </div>
 			</div>
 			<!-- Jssor carousel -->
 
 					<div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1920px; height: 1037px; overflow: hidden">
-						<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1037px;">
+						<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1038px;">
                             <div>
                                 <a href="about.php">
-                                    <img u="image" src="img/panda.png" style="position: absolute" />
+                                    <img u="image" src="img/everyone.jpeg" style="position: absolute" />
                                     <div class="captionBox"></div>
-                                    <p class="captionText captionTextHeading">To ask why we fight, is to ask why the leaves fall</p>
-                                    <p class="captionText captionTextBody">It is in their nature. Perhaps there is a better question...</p>
+                                    <p class="captionText captionTextHeading">Learn more about the FIC</p>
+                                    <p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
                                 </a>
                             </div>
-							<div>
-								<a href="events.php">
-								<img u="image" src="img/elizabeth.jpg" style="position: absolute" />
-								<div class="captionBox"></div>
-								<p class="captionText captionTextHeading">Open Meeting &mdash; October 24</p>
-								<p class="captionText captionTextBody">FIC alumna Elizabeth speaks about the effects of tears in the fabric of space, and what it means for your portfolio.</p>
-								</a>
-							</div>
-							<div>
-								<a href="apply.php">
-								<img u="image" src="img/fly.jpg" style="position: absolute" />
-								<div class="captionBox"></div>
-								<p class="captionText captionTextHeading">Join the Dream Team</p>
-								<p class="captionText captionTextBody">Pierce the Heavens!</p>
-								</a>
-							</div>
+                            <div>
+                                <a href="events.php">
+                                    <img u="image" src="img/mixer.jpg" style="position: absolute; width: 1920px" />
+                                    <div class="captionBox"></div>
+                                    <p class="captionText captionTextHeading">Browse upcoming events</p>
+                                    <p class="captionText captionTextBody">Annual events include career panels and open meetings</p>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="apply.php">
+                                    <img u="image" src="img/analysis.JPG" style="position: absolute" />
+                                    <div class="captionBox"></div>
+                                    <p class="captionText captionTextHeading">The application for Spring 2015 is now open</p>
+                                    <p class="captionText captionTextBody">Click here to apply</p>
+                                </a>
+                            </div>
 						</div>
 
 						<!-- Arrow Navigator Skin Begin -->
@@ -160,14 +159,14 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 						<table style="border: none; outline: none; margin-bottom: 0px;">
 							<tr>
 								<td width="30%"><img src="img/mic.jpg"/></td>
-								<td width="70%"><p><a href="events.php#openMeetings"><b>Open Meeting</b></a><br />Come listen to a fascinating presentation from
-									the most interesting man in the world!</p></td>
+								<td width="70%"><p><a href="events.php#openMeetings"><b>Open Meeting</b></a><br />Come out, meet the club members,
+                                    and listen to a renowned guest.</p></td>
 							</tr>
 						</table>
 
 					</div>
 					<div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
-						<span class="eventDate">Oct 24<br /></span>
+						<span class="eventDate">TBA<br /></span>
 						<a href="#" style="font-size: small">(more info)</a>
 					</div>
 				</div>
@@ -190,8 +189,9 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 
 					</div>
 					<div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
-						<span class="eventDate">Nov 7<br /></span>
-						<a href="#" style="font-size: small">(more info)</a>
+						<span class="eventDate">Feb 10<br /></span>
+                        <a href="#" style="font-size: small">Business formal attire</a>
+                        <a href="#" style="font-size: small">Location TBA</a>
 					</div>
 				</div>
 			</div>
