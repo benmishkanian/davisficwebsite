@@ -1,6 +1,6 @@
 # UC Davis Finance & Investment Club Website
 
-Website of the UC Davis Finance & Investment Club. The site is hosted at **[davisfic.com](http://http://www.davisfic.com/)**.
+Website of the UC Davis Finance & Investment Club. The site is hosted at **[davisfic.com](http://www.davisfic.com/)**.
 
 ## Author
 
