@@ -45,7 +45,7 @@
             <div class="small-3 column">
                 <img class="photo" src="img/memberPhotos/William%20Baker.jpg" style="margin: auto"/>
                 <p class=".personName">William Baker</p>
-                <p class="descText">Will, Vice president of FIC, is a senior majoring in Managerial Economics. He has been an active member of FIC since Winter 2014. Will has been actively trading equities and options for 3 years. He currently is currently interning at Merrill Lynch and may continue working there after graduation. Outside of academic activities, work, and technical analysis, Will enjoys strategy games, racquetball, and reading.</p>
+                <p class="descText">Will, Vice president of FIC, is a senior majoring in Managerial Economics. He has been an active member of FIC since Winter 2014. Will has been actively trading equities and options for 3 years. He is currently interning at Merrill Lynch and may continue working there after graduation. Outside of academic activities, work, and technical analysis, Will enjoys strategy games, racquetball, and reading.</p>
             </div>
         </div>
         <div class="row">
