@@ -6,6 +6,19 @@
     <title>Apply</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <!-- JQuery UI, hosted by Google. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <style>
+        .helpButton {
+            width: 20px;
+            float: left;
+        }
+    </style>
+    <script>
+        jQuery(document).tooltip()
+    </script>
     <script>
         function validateEmail() {
             if (document.getElementById("email1").value != document.getElementById("email2").value) {
@@ -54,12 +67,12 @@
             </div>
             <div class="row">
                 <div class="large-5 columns">
-                    <label>R&eacute;sum&eacute;</label>
+                    <label style="float: left">R&eacute;sum&eacute;&nbsp;&nbsp;</label><img class="helpButton" title="PDF format is preferred." src="img/questionbutton.jpg"/>
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-                    <input required name="userfile" type="file" placeholder="PDF file format" />
+                    <input required name="userfile"type="file" placeholder="PDF file format" />
                 </div>
                 <div class="large-5 columns">
-                    <label>Stock Report</label>
+                    <label style="float: left">Stock Report&nbsp;&nbsp;</label><img class="helpButton" title="Write a 1-page report on a stock of your choosing." src="img/questionbutton.jpg"/>
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
                     <input required name="stockReport" type="file" placeholder="PDF file format" />
                 </div>

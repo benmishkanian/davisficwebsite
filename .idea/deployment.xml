@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="1and1">
+  <component name="PublishConfigData" serverName="1and1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;config.php;db.php">
     <serverData>
       <paths name="1and1">
         <serverdata>
