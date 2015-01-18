@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="1and1">
-    <serverData>
-      <paths name="1and1">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/FIC" local="$PROJECT_DIR$" web="/FIC" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-  </component>
+  <component name="PublishConfigData" serverName="1and1" />
 </project>
-
