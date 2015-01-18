@@ -88,70 +88,70 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
                 </div>
 			</div>
 			<!-- Jssor carousel -->
-
-					<div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1920px; height: 1037px; overflow: hidden">
-						<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1038px;">
-                            <div>
-                                <a href="about.php">
-                                    <img u="image" src="img/everyone.jpeg" style="position: absolute" />
-                                    <div class="captionBox"></div>
-                                    <p class="captionText captionTextHeading">Learn more about the FIC</p>
-                                    <p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="events.php">
-                                    <img u="image" src="img/mixer.jpg" style="position: absolute; width: 1920px" />
-                                    <div class="captionBox"></div>
-                                    <p class="captionText captionTextHeading">Browse upcoming events</p>
-                                    <p class="captionText captionTextBody">Annual events include career panels and open meetings</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="apply.php">
-                                    <img u="image" src="img/analysis.JPG" style="position: absolute" />
-                                    <div class="captionBox"></div>
-                                    <p class="captionText captionTextHeading">The application for Spring 2015 is now open</p>
-                                    <p class="captionText captionTextBody">Click here to apply</p>
-                                </a>
-                            </div>
+			<div style="max-width: 1920px" class="row">
+				<div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1920px; height: 1037px; overflow: hidden">
+					<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1038px;">
+						<div>
+							<a href="about.php">
+								<img u="image" src="img/everyone.jpeg" style="position: absolute" />
+								<div class="captionBox"></div>
+								<p class="captionText captionTextHeading">Learn more about the FIC</p>
+								<p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
+							</a>
 						</div>
-
-						<!-- Arrow Navigator Skin Begin -->
-						<style>
-							/* jssor slider arrow navigator skin 02 css */
-							/*
-                            .jssora02l              (normal)
-                            .jssora02r              (normal)
-                            .jssora02l:hover        (normal mouseover)
-                            .jssora02r:hover        (normal mouseover)
-                            .jssora02ldn            (mousedown)
-                            .jssora02rdn            (mousedown)
-                            */
-							.jssora02l, .jssora02r, .jssora02ldn, .jssora02rdn
-							{
-								position: absolute;
-								cursor: pointer;
-								display: block;
-								background: url(img/a02.png) no-repeat;
-								overflow:hidden;
-							}
-							.jssora02l { background-position: -3px -33px; }
-							.jssora02r { background-position: -63px -33px; }
-							.jssora02l:hover { background-position: -123px -33px; }
-							.jssora02r:hover { background-position: -183px -33px; }
-							.jssora02ldn { background-position: -3px -33px; }
-							.jssora02rdn { background-position: -63px -33px; }
-						</style>
-						<!-- Arrow Left -->
-        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 50%; left: 15px;" onclick="pauseSlider()">
-        </span>
-						<!-- Arrow Right -->
-        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 50%; right: 15px" onclick="pauseSlider()">
-        </span>
-						<!-- Arrow Navigator Skin End -->
+						<div>
+							<a href="events.php">
+								<img u="image" src="img/mixer.jpg" style="position: absolute; width: 1920px" />
+								<div class="captionBox"></div>
+								<p class="captionText captionTextHeading">Browse upcoming events</p>
+								<p class="captionText captionTextBody">Annual events include career panels and open meetings</p>
+							</a>
+						</div>
+						<div>
+							<a href="apply.php">
+								<img u="image" src="img/analysis.JPG" style="position: absolute" />
+								<div class="captionBox"></div>
+								<p class="captionText captionTextHeading">The application for Spring 2015 is now open</p>
+								<p class="captionText captionTextBody">Click here to apply</p>
+							</a>
+						</div>
 					</div>
 
+					<!-- Arrow Navigator Skin Begin -->
+					<style>
+						/* jssor slider arrow navigator skin 02 css */
+						/*
+                        .jssora02l              (normal)
+                        .jssora02r              (normal)
+                        .jssora02l:hover        (normal mouseover)
+                        .jssora02r:hover        (normal mouseover)
+                        .jssora02ldn            (mousedown)
+                        .jssora02rdn            (mousedown)
+                        */
+						.jssora02l, .jssora02r, .jssora02ldn, .jssora02rdn
+						{
+							position: absolute;
+							cursor: pointer;
+							display: block;
+							background: url(img/a02.png) no-repeat;
+							overflow:hidden;
+						}
+						.jssora02l { background-position: -3px -33px; }
+						.jssora02r { background-position: -63px -33px; }
+						.jssora02l:hover { background-position: -123px -33px; }
+						.jssora02r:hover { background-position: -183px -33px; }
+						.jssora02ldn { background-position: -3px -33px; }
+						.jssora02rdn { background-position: -63px -33px; }
+					</style>
+					<!-- Arrow Left -->
+        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 50%; left: 15px;" onclick="pauseSlider()">
+        </span>
+					<!-- Arrow Right -->
+        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 50%; right: 15px" onclick="pauseSlider()">
+        </span>
+					<!-- Arrow Navigator Skin End -->
+				</div>
+			</div>
 			<!-- Event Listings -->
 			<div class="row">
 				<div class="large-12 columns" style="background-color: #ffffff">
