@@ -8,6 +8,8 @@ Ben Mishkanian - benmishkanian \[atty\] ucdavis \[dotty\] edu
 
 ## Dependencies
 
+**[Couch CMS](http://www.couchcms.com/)**
+
 php-login requirements:  
 - PHP 5.3.7+  
 - MySQL 5 database (please use a modern version of MySQL (5.5, 5.6, 5.7) as very old versions have a exotic bug that

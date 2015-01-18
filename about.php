@@ -1,3 +1,4 @@
+<?php require_once( 'couch/cms.php' ); ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -25,28 +26,36 @@
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
         <img src="img/casualgroup.JPG" width="1920px" />
-        <h2 style="text-align: center">FIC Points of Pride</h2>
-        <p style="text-align: center">Our members are constantly progressing their financial literacy and market understanding</p>
+        <cms:editable name='headline' type='richtext'>
+            <h2 style="text-align: center">FIC Points of Pride</h2>
+            <p style="text-align: center">Our members are constantly progressing their financial literacy and market understanding</p>
+        </cms:editable>
         <ul class="small-block-grid-1 large-block-grid-3">
             <li><div ><div class="roundContainer" style="margin: auto">
                         <img src="/img/handshake.JPG" />
                     </div>
+                    <cms:editable name='bubble1' type='richtext'>
                     <p style="text-align: center; font-size: large">Network</p>
                     <p style="padding: 20px">Members find themselves in a like-minded environment of passionate, driven individuals.</p>
+                    </cms:editable>
                 </div>
             </li>
             <li><div ><div class="roundContainer"style="margin: auto">
                         <img src="/img/muhammadpresentation.JPG" />
                     </div>
+                    <cms:editable name='bubble2' type='richtext'>
                     <p style="text-align: center; font-size: large">Develop</p>
                     <p style="padding: 20px">Expand financial knowledge and refine analytical skills.</p>
+                    </cms:editable>
                 </div>
             </li>
             <li><div ><div class="roundContainer"style="margin: auto">
                         <img src="/img/excel.jpg" />
                     </div>
+                    <cms:editable name='bubble3' type='richtext'>
                     <p style="text-align: center; font-size: large">Excel</p>
                     <p style="padding: 20px">Our members and alumni hold positions in top-tier financial institutions.</p>
+                    </cms:editable>
                 </div>
             </li>
         </ul>
@@ -63,3 +72,4 @@
 </script>
 </body>
 </html>
+<?php COUCH::invoke(); ?>

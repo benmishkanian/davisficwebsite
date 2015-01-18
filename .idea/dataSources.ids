@@ -22,5 +22,237 @@
       <column name="stockReportContent" sqlType="MEDIUMBLOB" precision="16777215" scale="0" nullable="false" jdbcType="-4"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
+    <table name="couch_attachments" schema="" catalog="test" type="TABLE">
+      <column name="attach_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="file_real_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_disk_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_extension" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="file_size" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="file_time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="is_orphan" sqlType="TINYINT UNSIGNED" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="hit_count" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="attach_id"/>
+      <index name="couch_attachments_Index01" unique="false" columns="is_orphan"/>
+      <index name="couch_attachments_Index02" unique="false" columns="file_time"/>
+      <index name="couch_attachments_Index03" unique="false" columns="is_orphan,file_time"/>
+    </table>
+    <table name="couch_comments" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tpl_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="link" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ip_addr" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="data" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="approved" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_comments_Index01" unique="false" columns="date"/>
+      <index name="couch_comments_Index02" unique="false" columns="page_id,approved,date"/>
+      <index name="couch_comments_Index03" unique="false" columns="tpl_id,approved,date"/>
+      <index name="couch_comments_Index04" unique="false" columns="approved,date"/>
+      <index name="couch_comments_Index05" unique="false" columns="tpl_id,page_id,approved,date"/>
+    </table>
+    <table name="couch_data_numeric" schema="" catalog="test" type="TABLE">
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="value" sqlType="DECIMAL" precision="65" scale="2" nullable="true" jdbcType="3" def="MC4wMA=="/>
+      <primary-key name="PRIMARY" columns="page_id,field_id"/>
+      <index name="couch_data_numeric_Index01" unique="false" columns="value"/>
+      <index name="couch_data_numeric_Index02" unique="false" columns="field_id,value"/>
+    </table>
+    <table name="couch_data_text" schema="" catalog="test" type="TABLE">
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="search_value" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="page_id,field_id"/>
+      <index name="couch_data_text_Index01" unique="false" columns="search_value"/>
+      <index name="couch_data_text_Index02" unique="false" columns="field_id,search_value"/>
+    </table>
+    <table name="couch_fields" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="template_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="label" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="k_desc" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="k_type" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="hidden" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="search_type" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" def="J3RleHQn"/>
+      <column name="k_order" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="data" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="default_data" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="required" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="deleted" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="validator" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="validator_msg" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="k_separator" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="val_separator" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="opt_values" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="opt_selected" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="toolbar" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="custom_toolbar" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="css" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="custom_styles" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="maxlength" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="height" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="width" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="k_group" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="collapsed" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="assoc_field" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crop" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="enforce_max" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
+      <column name="quality" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="show_preview" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="preview_width" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="preview_height" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="no_xss_check" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="rtl" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="body_id" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="body_class" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="disable_uploader" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="_html" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" remarks="SW50ZXJuYWw="/>
+      <column name="dynamic" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="custom_params" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_fields_index01" unique="false" columns="k_group,k_order,id"/>
+      <index name="couch_fields_Index02" unique="false" columns="template_id"/>
+    </table>
+    <table name="couch_folders" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="LTE="/>
+      <column name="template_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="k_desc" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="access_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_folders_Index02" unique="true" columns="template_id,name"/>
+      <index name="couch_folders_Index01" unique="false" columns="template_id,id"/>
+    </table>
+    <table name="couch_fulltext" schema="" catalog="test" type="TABLE">
+      <column name="page_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="page_id"/>
+      <index name="couch_fulltext_Index01" unique="false" columns="title"/>
+      <index name="couch_fulltext_Index02" unique="false" columns="content"/>
+    </table>
+    <table name="couch_levels" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="k_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="disabled" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_levels_index01" unique="true" columns="k_level"/>
+    </table>
+    <table name="couch_pages" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="template_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="parent_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="page_title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="creation_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modification_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="publish_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="is_master" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="page_folder_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="LTE="/>
+      <column name="access_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="comments_count" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="comments_open" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
+      <column name="nested_parent_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="LTE="/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="show_in_menu" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
+      <column name="menu_text" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_pointer" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="pointer_link" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="pointer_link_detail" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="open_external" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="masquerades" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="strict_matching" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="file_name" sqlType="VARCHAR" precision="260" scale="0" nullable="true" jdbcType="12"/>
+      <column name="file_ext" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="file_size" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="file_meta" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="creation_IP" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_pages_Index03" unique="true" columns="template_id,page_name"/>
+      <index name="couch_pages_Index01" unique="false" columns="template_id,publish_date"/>
+      <index name="couch_pages_Index02" unique="false" columns="template_id,page_folder_id,publish_date"/>
+      <index name="couch_pages_Index04" unique="false" columns="template_id,modification_date"/>
+      <index name="couch_pages_Index05" unique="false" columns="template_id,page_folder_id,modification_date"/>
+      <index name="couch_pages_Index06" unique="false" columns="template_id,page_folder_id,page_name"/>
+      <index name="couch_pages_Index07" unique="false" columns="template_id,comments_count"/>
+      <index name="couch_pages_Index08" unique="false" columns="template_id,page_title"/>
+      <index name="couch_pages_Index09" unique="false" columns="template_id,page_folder_id,page_title"/>
+      <index name="couch_pages_Index10" unique="false" columns="template_id,page_folder_id,comments_count"/>
+      <index name="couch_pages_Index11" unique="false" columns="template_id,parent_id,modification_date"/>
+      <index name="couch_pages_Index12" unique="false" columns="parent_id,modification_date"/>
+      <index name="couch_pages_Index13" unique="false" columns="template_id,is_pointer,masquerades,pointer_link_detail"/>
+      <index name="couch_pages_Index14" unique="false" columns="template_id,file_name"/>
+      <index name="couch_pages_Index15" unique="false" columns="template_id,page_folder_id,file_name"/>
+      <index name="couch_pages_Index16" unique="false" columns="template_id,file_ext,file_name"/>
+      <index name="couch_pages_Index17" unique="false" columns="template_id,page_folder_id,file_ext,file_name"/>
+      <index name="couch_pages_Index18" unique="false" columns="template_id,file_size"/>
+      <index name="couch_pages_Index19" unique="false" columns="template_id,page_folder_id,file_size"/>
+      <index name="couch_pages_Index20" unique="false" columns="creation_IP,creation_date"/>
+    </table>
+    <table name="couch_relations" schema="" catalog="test" type="TABLE">
+      <column name="pid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="fid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="cid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="weight" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="pid,fid,cid"/>
+      <index name="couch_relations_Index01" unique="false" columns="pid,fid,weight"/>
+      <index name="couch_relations_Index02" unique="false" columns="fid,cid,weight"/>
+      <index name="couch_relations_Index03" unique="false" columns="cid,fid"/>
+    </table>
+    <table name="couch_settings" schema="" catalog="test" type="TABLE">
+      <column name="k_key" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="k_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="k_key"/>
+    </table>
+    <table name="couch_templates" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="clonable" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="executable" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="access_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="commentable" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="hidden" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="k_order" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="dynamic_folders" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="nested_pages" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="gallery" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_templates_Index01" unique="true" columns="name"/>
+    </table>
+    <table name="couch_users" schema="" catalog="test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="activation_key" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="registration_date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="access_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="disabled" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="system" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="last_failed" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="couch_users_email" unique="true" columns="email"/>
+      <index name="couch_users_name" unique="true" columns="name"/>
+      <index name="couch_users_activation_key" unique="false" columns="activation_key"/>
+      <index name="couch_users_index01" unique="false" columns="access_level"/>
+      <index name="couch_users_index02" unique="false" columns="access_level,name"/>
+    </table>
   </data-source>
 </component>

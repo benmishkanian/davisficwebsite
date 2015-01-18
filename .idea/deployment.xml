@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="1and1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;config.php;db.php">
+  <component name="PublishConfigData" serverName="1and1" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;config.php;db.php;README.md">
     <serverData>
       <paths name="1and1">
         <serverdata>
           <mappings>
             <mapping deploy="/FIC" local="$PROJECT_DIR$" web="/FIC" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/couch" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
