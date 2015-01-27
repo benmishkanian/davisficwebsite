@@ -11,7 +11,9 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/careerpanel4.jpg" width="1920px">
+        <div style="max-width: 1920px" class="row">
+            <img src="img/careerpanel4.jpg" width="1920px">
+        </div>
         <div class="row">
             <div id="careerPanels" style="position:relative; top:-50px;"></div>
         <h2 style="font-family: cursive">Career Panels</h2>

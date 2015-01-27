@@ -20,7 +20,9 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/allmembers.jpeg" />
+        <div style="max-width: 1920px" class="row">
+            <img src="img/allmembers.jpeg" />
+        </div>
         <h3 style="text-align: center">Click or tap a photo to learn more about our members</h3>
         <div class="row">
             <h2 style="font-family: cursive">Officers</h2>

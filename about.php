@@ -19,13 +19,20 @@
             min-width: 100%;
             min-height: 100%;
         }
+
+        .bubbleHeading {
+            text-align: center;
+            font-size: large;
+        }
     </style>
 </head>
 <body>
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/casualgroup.JPG" width="1920px" />
+        <div style="max-width: 1920px" class="row">
+            <img src="img/casualgroup.JPG" width="1920px" />
+        </div>
         <cms:editable name='headline' type='richtext'>
             <h2 style="text-align: center">FIC Points of Pride</h2>
             <p style="text-align: center">Our members are constantly progressing their financial literacy and market understanding</p>
@@ -35,8 +42,8 @@
                         <img src="/img/handshake.JPG" />
                     </div>
                     <cms:editable name='bubble1' type='richtext'>
-                    <p style="text-align: center; font-size: large">Network</p>
-                    <p style="padding: 20px">Members find themselves in a like-minded environment of passionate, driven individuals.</p>
+                    <p class="bubbleHeading">Network</p>
+                    <p style="text-align: center">Members find themselves in a like-minded environment of passionate, driven individuals.</p>
                     </cms:editable>
                 </div>
             </li>
@@ -44,8 +51,8 @@
                         <img src="/img/muhammadpresentation.JPG" />
                     </div>
                     <cms:editable name='bubble2' type='richtext'>
-                    <p style="text-align: center; font-size: large">Develop</p>
-                    <p style="padding: 20px">Expand financial knowledge and refine analytical skills.</p>
+                    <p class="bubbleHeading">Develop</p>
+                    <p style="text-align: center">Expand financial knowledge and refine analytical skills.</p>
                     </cms:editable>
                 </div>
             </li>
@@ -53,8 +60,8 @@
                         <img src="/img/excel.jpg" />
                     </div>
                     <cms:editable name='bubble3' type='richtext'>
-                    <p style="text-align: center; font-size: large">Excel</p>
-                    <p style="padding: 20px">Our members and alumni hold positions in top-tier financial institutions.</p>
+                    <p class="bubbleHeading">Excel</p>
+                    <p style="text-align: center">Our members and alumni hold positions in top-tier financial institutions.</p>
                     </cms:editable>
                 </div>
             </li>

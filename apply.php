@@ -38,7 +38,9 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include 'boilerplate.html';?>
-        <img src="img/meeting.JPG" width="1920px" />
+        <div style="max-width: 1920px" class="row">
+            <img src="img/meeting.JPG"/>
+        </div>
         <div class="row">
         <p style="text-align: center">The application for Spring 2015 membership is now open. Applications will be reviewed in February.</p>
         <p id="thankYou" style="display: none">Thank you for your application. We will review it as soon as possible, and send you an email containing next steps.</p>
