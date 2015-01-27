@@ -1,7 +1,7 @@
+<?php require_once( 'couch/cms.php' ); ?>
 <!--
 Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 -->
-<?php require_once( 'couch/cms.php' ); ?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
