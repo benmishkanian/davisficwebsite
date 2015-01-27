@@ -1,6 +1,7 @@
 <!--
 Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 -->
+<?php require_once( 'couch/cms.php' ); ?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -87,16 +88,24 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
                     <p style="text-align: center; margin-bottom: 0; padding-bottom: 0; font-family: Lucida Grande; color: #002855">at UC Davis</p>
                 </div>
 			</div>
+			<!-- Hidden tags for enabling editing of slider through CMS -->
+			<div style="display: none">
+				<cms:editable name='slide1' width='1920' type='image' />
+				<cms:editable name='slide1link' type='text'>about.php</cms:editable>
+			</div>
 			<!-- Jssor carousel -->
 			<div style="max-width: 1920px" class="row">
 				<div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1920px; height: 1037px; overflow: hidden">
 					<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1038px;">
 						<div>
-							<a href="about.php">
-								<img u="image" src="img/everyone.jpeg" style="position: absolute" />
+							<a href="<cms:show slide1link />">
+
+								<img u="image" src="<cms:show slide1 />" onerror="if (this.src != 'img/everyone.jpeg') this.src = 'img/everyone.jpeg';" style="position: absolute" />
 								<div class="captionBox"></div>
-								<p class="captionText captionTextHeading">Learn more about the FIC</p>
-								<p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
+								<cms:editable name='slide1caption' type='richtext'>
+									<p class="captionText captionTextHeading">Learn more about the FIC</p>
+									<p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
+								</cms:editable>
 							</a>
 						</div>
 						<div>
@@ -243,3 +252,4 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 
 </body>
 </html>
+<?php COUCH::invoke(); ?>
