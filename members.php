@@ -85,7 +85,7 @@
             <div class="small-3 column">
                 <img class="photo" src="img/memberPhotos/Joshua%20Donnelly.jpg" style="margin: auto"/>
                 <p class=".personName">Joshua Donnelly</p>
-                <p class="descText">Just a city boy, born and raised in south Detroit. He took the midnight train goin' anywhere.</p>
+                <p class="descText">Josh is a fourth-year Managerial Economics major that hopes to find some career involved with finance upon graduation.</p>
             </div>
             <div class="small-3 column">
                 <img class="photo" src="img/memberPhotos/Kayla%20Knapp.jpg" style="margin: auto"/>
