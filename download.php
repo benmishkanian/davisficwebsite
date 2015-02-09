@@ -12,8 +12,12 @@ if(isset($_GET['id']) && isset($_GET['fileType']))
         $query = "SELECT name, type, size, content " .
             "FROM applications WHERE id = '$id'";
     }
-    else {
+    else if ($fileType == "stockReport") {
         $query = "SELECT stockReportName, stockReportType, stockReportSize, stockReportContent " .
+            "FROM applications WHERE id = '$id'";
+    }
+    else if ($fileType == "coverLetter") {
+        $query = "SELECT coverLetterName, coverLetterType, coverLetterSize, coverLetterContent " .
             "FROM applications WHERE id = '$id'";
     }
     $result = mysql_query($query) or die('Error, query failed');

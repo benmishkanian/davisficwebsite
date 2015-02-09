@@ -47,41 +47,46 @@
         </div>
             <form id="mainForm" data-abide action="upload.php" method="post" enctype="multipart/form-data">
             <div class="row">
-                <div class="large-5 columns">
+                <div class="large-6 columns">
                     <label>First Name</label>
                     <input required name="firstName" type="text" placeholder="First Name" />
                 </div>
-                <div class="large-5 columns">
+                <div class="large-6 columns end">
                     <label>Last Name</label>
                     <input required name="lastName" type="text" placeholder="Last Name" />
                 </div>
             </div>
             <div class="row">
-                <div class="large-5 columns">
+                <div class="large-6 columns">
                     <label>Email Address</label>
                     <input required id="email1" name="email" type="email" placeholder="john.smith@example.com" />
                 </div>
-                <div class="large-5 columns">
+                <div class="large-6 columns end">
                     <label>Confirm Email Address</label>
                     <input id="email2" type="email" placeholder="john.smith@example.com" onblur="validateEmail()"/>
                     <small id="emailError" class="error" style="display: none">Email addresses do not match</small>
                 </div>
             </div>
             <div class="row">
-                <div class="large-5 columns">
+                <div class="large-4 columns">
                     <label style="float: left">R&eacute;sum&eacute;&nbsp;&nbsp;</label><img class="helpButton" title="PDF format is preferred." src="img/questionbutton.jpg"/>
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
                     <input required name="userfile"type="file" placeholder="PDF file format" />
                 </div>
-                <div class="large-5 columns">
+                <div class="large-4 columns">
+                    <label style="float: left">Cover Letter&nbsp;&nbsp;</label><img class="helpButton" title="1-page maximum" src="img/questionbutton.jpg"/>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                    <input required name="coverLetter" type="file" placeholder="PDF file format" />
+                </div>
+                <div class="large-4 columns">
                     <label style="float: left">Stock Report&nbsp;&nbsp;</label><img class="helpButton" title="Write a 1-page report on a stock of your choosing." src="img/questionbutton.jpg"/>
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
                     <input required name="stockReport" type="file" placeholder="PDF file format" />
                 </div>
             </div>
             <div class="row">
-                <div class="large-5 columns small-centered">
-                    <input name="upload" type="submit" id="upload" value=" Submit Application " class="button success"/>
+                <div class="large-6 columns small-centered" style="text-align: center">
+                    <input name="upload" type="submit" id="upload" value="Submit Application" class="button success"/>
                 </div>
             </div>
         </form>

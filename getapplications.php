@@ -33,6 +33,7 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>R&eacute;sum&eacute;</th>
+                <th>Cover Letter</th>
                 <th>Stock Report</th>
                 <th>Delete</th>
             </tr>
@@ -41,7 +42,7 @@
         include 'config.php';
         include 'opendb.php';
 
-        $query = "SELECT id, name, firstName, lastName, email, stockReportName FROM applications";
+        $query = "SELECT id, name, firstName, lastName, email, stockReportName, coverLetterName FROM applications";
         $result = mysql_query($query) or die('Error, query failed');
         if(mysql_num_rows($result) == 0)
         {
@@ -49,7 +50,7 @@
         }
         else
         {
-            while(list($id, $name, $firstName, $lastName, $email, $stockReportName) = mysql_fetch_array($result))
+            while(list($id, $name, $firstName, $lastName, $email, $stockReportName, $coverLetterName) = mysql_fetch_array($result))
             {
                 ?>
                 <tr id="<?=$id;?>">
@@ -64,6 +65,9 @@
                     </td>
                     <td>
                         <a href="download.php?id=<?=$id;?>&amp;fileType=resume"><?=$name;?></a>
+                    </td>
+                    <td>
+                        <a href="download.php?id=<?=$id;?>&amp;fileType=coverLetter"><?=$coverLetterName;?></a>
                     </td>
                     <td>
                         <a href="download.php?id=<?=$id;?>&amp;fileType=stockReport"><?=$stockReportName;?></a>
