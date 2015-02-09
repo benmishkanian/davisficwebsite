@@ -55,5 +55,5 @@ if (isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $_FILES['stock
 
     mysql_query($query) or die(mysql_error());
     include 'closedb.php';
-    include 'applicationsuccess.html';
+    include 'applicationsuccess.php';
 }

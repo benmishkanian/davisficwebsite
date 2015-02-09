@@ -10,7 +10,9 @@
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <?php include "boilerplate.html";?>
-        <img src="img/thankyou.jpg" width="1280px" />
+        <div style="max-width: 1920px" class="row">
+            <img src="img/thankyou.jpg" width="1920px" />
+        </div>
         <p style="text-align: center">Your application was submitted successfully. We will review it as soon as possible, and notify you through email.</p>
         <div class="row">
             <div class="large-12 small-centered columns">
