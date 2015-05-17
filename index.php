@@ -196,25 +196,6 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
                 </div>
             </div>
             </cms:show_repeatable>
-			<div class="row">
-				<div class="large-12 columns" style="background-color: #ffffff">
-					<div class="large-10 medium-10 columns">
-						<table style="border: none; outline: none; margin-bottom: 0px;">
-							<tr>
-								<td width="30%"><img src="img/panel.jpg"/></td>
-								<td width="70%"><p><a href="events.php#careerPanels"><b>Career Panel</b></a><br />Come ask questions from a talented group
-									of professionals spanning the entire financial industry!</p></td>
-							</tr>
-						</table>
-
-					</div>
-					<div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
-						<span class="eventDate">Feb 10<br /></span>
-                        <a href="#" style="font-size: small">Business formal attire</a>
-                        <a href="#" style="font-size: small">Location TBA</a>
-					</div>
-				</div>
-			</div>
 
 			<script src="js/vendor/jquery.js"></script>
 			<script src="js/jssor.js"></script>
