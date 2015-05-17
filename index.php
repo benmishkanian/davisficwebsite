@@ -90,8 +90,8 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 			</div>
 			<!-- Hidden tags for enabling editing of slider through CMS -->
 			<div style="display: none">
-				<cms:editable name='slide1' width='1920' type='image' />
-				<cms:editable name='slide1link' type='text'>about.php</cms:editable>
+				<cms:editable name='slide1' width='1920' type='image' label="Slide 1"/>
+				<cms:editable name='slide1link' type='text' label="Slide 1 Link">about.php</cms:editable>
 			</div>
 			<!-- Jssor carousel -->
 			<div style="max-width: 1920px" class="row">
@@ -102,7 +102,7 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 
 								<img u="image" src="<cms:show slide1 />" onerror="if (this.src != 'img/everyone.jpeg') this.src = 'img/everyone.jpeg';" style="position: absolute" />
 								<div class="captionBox"></div>
-								<cms:editable name='slide1caption' type='richtext'>
+								<cms:editable name='slide1caption' type='richtext' label="Slide 1 Caption">
 									<p class="captionText captionTextHeading">Learn more about the FIC</p>
 									<p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
 								</cms:editable>
@@ -162,29 +162,40 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 				</div>
 			</div>
 			<!-- Event Listings -->
-			<div class="row">
-				<div class="large-12 columns" style="background-color: #ffffff">
-					<div class="large-10 medium-10 columns">
-						<table style="border: none; outline: none; margin-bottom: 0px;">
-							<tr>
-								<td width="30%"><img src="img/mic.jpg"/></td>
-								<td width="70%"><p><a href="events.php#openMeetings"><b>Open Meeting</b></a><br />Come out, meet the club members,
-                                    and listen to a renowned guest.</p></td>
-							</tr>
-						</table>
+            <!-- Hidden tags for enabling editing of event listings through CMS -->
+            <cms:repeatable name='eventListing' label="A single event listing row">
+                <cms:editable name='eventImage' type='image' label="Image"/>
+                <cms:editable name='eventSiteLink' type='text' label="Description Link">events.php#openMeetings</cms:editable>
+                <cms:editable name='eventTitle' type='text' label="Title">Open Meeting</cms:editable>
+                <cms:editable name='eventText' type='text' label="Short Description">Come out, meet the club members, and listen to a renowned guest.</cms:editable>
+                <cms:editable name='eventDate' type='text' label="Date">TBA</cms:editable>
+                <cms:editable name='eventRsvpLink' type='text' label="RSVP Link">#</cms:editable>
+            </cms:repeatable>
 
-					</div>
-					<div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
-						<span class="eventDate">TBA<br /></span>
-						<a href="#" style="font-size: small">(more info)</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-12 columns">
-					<hr class="fade">
-				</div>
-			</div>
+            <cms:show_repeatable 'eventListing'>
+            <div class="row">
+                <div class="large-12 columns">
+                    <hr class="fade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns" style="background-color: #ffffff">
+                    <div class="large-10 medium-10 columns">
+                        <table style="border: none; outline: none; margin-bottom: 0px;">
+                            <tr>
+                                <td width="30%"><img src="<cms:show eventImage />" onerror="if (this.src != 'img/mic.jpg') this.src = 'img/mic.jpg';"/></td>
+                                <td width="70%"><p><a href="<cms:show eventSiteLink />"><b><cms:show eventTitle /></b></a><br /><cms:show eventText /></p></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
+                        <span class="eventDate"><cms:show eventDate /><br /></span>
+                        <a href="<cms:show eventRsvpLink />" style="font-size: small">(more info)</a>
+                    </div>
+                </div>
+            </div>
+            </cms:show_repeatable>
 			<div class="row">
 				<div class="large-12 columns" style="background-color: #ffffff">
 					<div class="large-10 medium-10 columns">
