@@ -164,12 +164,12 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 			<!-- Event Listings -->
             <!-- Hidden tags for enabling editing of event listings through CMS -->
             <cms:repeatable name='eventListing' label="A single event listing row">
-                <cms:editable name='eventImage' type='image' label="Image"/>
-                <cms:editable name='eventSiteLink' type='text' label="Description Link">events.php#openMeetings</cms:editable>
-                <cms:editable name='eventTitle' type='text' label="Title">Open Meeting</cms:editable>
-                <cms:editable name='eventText' type='text' label="Short Description">Come out, meet the club members, and listen to a renowned guest.</cms:editable>
-                <cms:editable name='eventDate' type='text' label="Date">TBA</cms:editable>
-                <cms:editable name='eventRsvpLink' type='text' label="RSVP Link">#</cms:editable>
+                <cms:editable name='eventImage' type='image' label="Image" col_width='500'/>
+                <cms:editable name='eventSiteLink' type='text' label="Description Link" col_width='300'>events.php#openMeetings</cms:editable>
+                <cms:editable name='eventTitle' type='text' label="Title" col_width='100'>Open Meeting</cms:editable>
+                <cms:editable name='eventText' type='text' label="Short Description" col_width='500'>Come out, meet the club members, and listen to a renowned guest.</cms:editable>
+                <cms:editable name='eventDate' type='text' label="Date" col_width='50'>TBA</cms:editable>
+                <cms:editable name='eventRsvpLink' type='text' label="RSVP Link" col_width='500'>#</cms:editable>
             </cms:repeatable>
 
             <cms:show_repeatable 'eventListing'>
