@@ -250,10 +250,11 @@
                 <a style="display: none" href="http://www.jssor.com">javascript</a>
             </div>
             <!-- Jssor Slider End -->
-            <p>In a typical quarter, the club will hold one to two open meetings. The meeting features a well-established
+            <p><cms:editable type="richtext" name="openMeetingDesc" label="Open Meeting Description">
+                    In a typical quarter, the club will hold one to two open meetings. The meeting features a well-established
             business professional that presents on some financial topic. Afterwords, you will have an opportunity to
-            talk with the speaker, as well as the members, and learn more about us and the club.</p>
-
+            talk with the speaker, as well as the members, and learn more about us and the club.
+                </cms:editable></p>
         </div>
 
         <?php include 'footer.html';?>
