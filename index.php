@@ -90,40 +90,28 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
 			</div>
 			<!-- Hidden tags for enabling editing of slider through CMS -->
 			<div style="display: none">
-				<cms:editable name='slide1' width='1920' type='image' label="Slide 1"/>
-				<cms:editable name='slide1link' type='text' label="Slide 1 Link">about.php</cms:editable>
+                <cms:repeatable name='slides' label="Slides in the main carousel">
+                    <cms:editable name='slidePhoto' type='image' label="Slide Photo" col_width='500' />
+                    <cms:editable name='slideCaptionHeading' type='text' label="Caption Heading" col_width='100'>Learn more about the FIC</cms:editable>
+                    <cms:editable name='slideCaptionSubheading' type='text' label="Caption Subheading" col_width='300'>Find out what distinguishes us and our alumni</cms:editable>
+                    <cms:editable name='slideLink' type='text' label="Slide Hyperlink" col_width='100'>about.php</cms:editable>
+                </cms:repeatable>
+
 			</div>
 			<!-- Jssor carousel -->
 			<div style="max-width: 1920px" class="row">
 				<div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 1920px; height: 1037px; overflow: hidden">
 					<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1920px; height: 1038px;">
-						<div>
-							<a href="<cms:show slide1link />">
-
-								<img u="image" src="<cms:show slide1 />" onerror="if (this.src != 'img/everyone.jpeg') this.src = 'img/everyone.jpeg';" style="position: absolute" />
-								<div class="captionBox"></div>
-								<cms:editable name='slide1caption' type='richtext' label="Slide 1 Caption">
-									<p class="captionText captionTextHeading">Learn more about the FIC</p>
-									<p class="captionText captionTextBody">Find out what distinguishes us and our alumni</p>
-								</cms:editable>
-							</a>
-						</div>
-						<div>
-							<a href="events.php">
-								<img u="image" src="img/mixer.jpg" style="position: absolute; width: 1920px" />
-								<div class="captionBox"></div>
-								<p class="captionText captionTextHeading">Browse upcoming events</p>
-								<p class="captionText captionTextBody">Annual events include career panels and open meetings</p>
-							</a>
-						</div>
-						<div>
-							<a href="apply.php">
-								<img u="image" src="img/analysis.JPG" style="position: absolute" />
-								<div class="captionBox"></div>
-								<p class="captionText captionTextHeading">The application for Spring 2015 is now open</p>
-								<p class="captionText captionTextBody">Click here to apply</p>
-							</a>
-						</div>
+                        <cms:show_repeatable 'slides'>
+                            <div>
+                                <a href="<cms:show slideLink />">
+                                    <img u="image" src="<cms:show slidePhoto />" onerror="if (this.src != 'img/everyone.jpeg') this.src = 'img/everyone.jpeg';" style="position: absolute" width="1920px" />
+                                    <div class="captionBox"></div>
+                                    <p class="captionText captionTextHeading"><cms:show slideCaptionHeading /></p>
+                                    <p class="captionText captionTextBody"><cms:show slideCaptionSubheading /></p>
+                                </a>
+                            </div>
+                        </cms:show_repeatable>
 					</div>
 
 					<!-- Arrow Navigator Skin Begin -->
@@ -173,28 +161,28 @@ Written by Ben Mishkanian - benmishkanian [at] ucdavis [dot] edu
             </cms:repeatable>
 
             <cms:show_repeatable 'eventListing'>
-            <div class="row">
-                <div class="large-12 columns">
-                    <hr class="fade">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <hr class="fade">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="large-12 columns" style="background-color: #ffffff">
-                    <div class="large-10 medium-10 columns">
-                        <table style="border: none; outline: none; margin-bottom: 0px;">
-                            <tr>
-                                <td width="30%"><img src="<cms:show eventImage />" onerror="if (this.src != 'img/mic.jpg') this.src = 'img/mic.jpg';"/></td>
-                                <td width="70%"><p><a href="<cms:show eventSiteLink />"><b><cms:show eventTitle /></b></a><br /><cms:show eventText /></p></td>
-                            </tr>
-                        </table>
+                <div class="row">
+                    <div class="large-12 columns" style="background-color: #ffffff">
+                        <div class="large-10 medium-10 columns">
+                            <table style="border: none; outline: none; margin-bottom: 0px;">
+                                <tr>
+                                    <td width="30%"><img src="<cms:show eventImage />" onerror="if (this.src != 'img/mic.jpg') this.src = 'img/mic.jpg';"/></td>
+                                    <td width="70%"><p><a href="<cms:show eventSiteLink />"><b><cms:show eventTitle /></b></a><br /><cms:show eventText /></p></td>
+                                </tr>
+                            </table>
 
-                    </div>
-                    <div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
-                        <span class="eventDate"><cms:show eventDate /><br /></span>
-                        <a href="<cms:show eventRsvpLink />" style="font-size: small">(more info)</a>
+                        </div>
+                        <div class="large-2 medium-2 columns eventInfo" style="text-align: center;">
+                            <span class="eventDate"><cms:show eventDate /><br /></span>
+                            <a href="<cms:show eventRsvpLink />" style="font-size: small">(more info)</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             </cms:show_repeatable>
 
 			<script src="js/vendor/jquery.js"></script>
