@@ -1,3 +1,4 @@
+<?php require_once( 'couch/cms.php' ); ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -42,7 +43,7 @@
             <img src="img/meeting.JPG"/>
         </div>
         <div class="row">
-        <p style="text-align: center">The application for Spring 2015 membership is now open. Applications will be reviewed in February.</p>
+        <p style="text-align: center"><cms:editable type="text" name="announcement">The application for Spring 2015 membership is now open. Applications will be reviewed in February.</cms:editable></p>
         <p id="thankYou" style="display: none">Thank you for your application. We will review it as soon as possible, and send you an email containing next steps.</p>
         </div>
             <form id="mainForm" data-abide action="upload.php" method="post" enctype="multipart/form-data">
@@ -103,3 +104,4 @@
 </script>
 </body>
 </html>
+<?php COUCH::invoke(); ?>
