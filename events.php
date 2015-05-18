@@ -128,10 +128,12 @@
             <a style="display: none" href="http://www.jssor.com">javascript</a>
         </div>
         <!-- Jssor Slider End -->
-            <p>Our annual career panel is an open event where accomplished financial professionals speak
+            <p><cms:editable type="richtext" name="careerPanelDesc" label="Career Panel Description">
+                    Our annual career panel is an open event where accomplished financial professionals speak
             about their experiences and careers. It is a great opportunity to gain exposure and insight into
                 multiple areas of finance. The event consists of a one-hour Q&amp;A session led by the club,
-            followed by open questions and the opportunity to meet the professionals one-on-one.</p>
+            followed by open questions and the opportunity to meet the professionals one-on-one.
+                </cms:editable></p>
 
         </div>
         <div class="row">
