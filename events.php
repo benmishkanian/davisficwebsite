@@ -1,3 +1,4 @@
+<?php require_once( 'couch/cms.php' ); ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -19,25 +20,19 @@
         <h2 style="font-family: cursive">Career Panels</h2>
         <hr>
         <!-- Jssor Slider Begin -->
-        <!-- You can move inline styles to css file or css block. -->
+        <cms:repeatable name='careerPanelSlides' label="Slides in the career panel slideshow">
+            <cms:editable name='careerPanelSlidePhoto' type='image' label="Slide Photo" col_width='500' />
+        </cms:repeatable>
         <div id="slider1_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 700px;
         height: 456px; background: #191919; overflow: hidden;">
-
-
             <!-- Slides Container -->
             <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 700px; height: 371px; overflow: hidden;">
-                <div>
-                    <img u="image" src="img/careerpanel2.jpg" />
-                    <img u="thumb" src="img/careerpanel2.jpg"/>
-                </div>
-                <div>
-                    <img u="image" src="img/careerpanel3.jpg" />
-                    <img u="thumb" src="img/careerpanel3.jpg"/>
-                </div>
-                <div>
-                    <img u="image" src="img/careerpanel5.jpg" />
-                    <img u="thumb" src="img/careerpanel5.jpg"/>
-                </div>
+                <cms:show_repeatable 'careerPanelSlides'>
+                    <div>
+                        <img u="image" src="<cms:show careerPanelSlidePhoto />" />
+                        <img u="thumb" src="<cms:show careerPanelSlidePhoto />"/>
+                    </div>
+                </cms:show_repeatable>
             </div>
 
             <!-- Arrow Navigator Skin Begin -->
@@ -384,3 +379,4 @@
 </script>
 </body>
 </html>
+<?php COUCH::invoke(); ?>
