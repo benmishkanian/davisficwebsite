@@ -30,7 +30,7 @@
                 <cms:show_repeatable 'careerPanelSlides'>
                     <div>
                         <img u="image" src="<cms:show careerPanelSlidePhoto />" />
-                        <img u="thumb" src="<cms:show careerPanelSlidePhoto />"/>
+                        <img u="thumb" src="<cms:show careerPanelSlidePhoto />" />
                     </div>
                 </cms:show_repeatable>
             </div>
@@ -141,25 +141,20 @@
             <h2 style="font-family: cursive">Open Meetings</h2>
             <hr>
             <!-- Jssor Slider Begin -->
+            <cms:repeatable name='openMeetingSlides' label="Slides in the open meeting slideshow">
+                <cms:editable name='openMeetingSlidePhoto' type='image' label="Slide Photo" col_width='500' />
+            </cms:repeatable>
             <!-- You can move inline styles to css file or css block. -->
             <div id="slider2_container" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 700px;
         height: 456px; background: #191919; overflow: hidden;">
-
-
                 <!-- Slides Container -->
                 <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 700px; height: 371px; overflow: hidden;">
-                    <div>
-                        <img u="image" src="img/investing101.jpg" />
-                        <img u="thumb" src="img/investing101.jpg"/>
-                    </div>
-                    <div>
-                        <img u="image" src="img/investinginchina.jpg" />
-                        <img u="thumb" src="img/investinginchina.jpg"/>
-                    </div>
-                    <div>
-                        <img u="image" src="img/oldteam.jpg" />
-                        <img u="thumb" src="img/oldteam.jpg"/>
-                    </div>
+                    <cms:show_repeatable 'openMeetingSlides'>
+                        <div>
+                            <img u="image" src="<cms:show openMeetingSlidePhoto />" />
+                            <img u="thumb" src="<cms:show openMeetingSlidePhoto />" />
+                        </div>
+                    </cms:show_repeatable>
                 </div>
 
                 <!-- Arrow Navigator Skin Begin -->
